@@ -6,49 +6,135 @@
     <link rel="stylesheet" href="https://catalogo.anqep.gov.pt/ufcdPesquisa">
     <title>PI-1</title>
     <style>
-        
-        /* Definir a imagem de fundo */
+        /* Seus estilos originais */
         body {
             background-image: url('https://i0.wp.com/radio-covilha.pt/wp-content/uploads/2023/05/escola-profissional-do-fundao.jpg?fit=1739%2C811&ssl=1');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             font-family: Arial, sans-serif;
-           
+            margin: 10px;
         }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 10px ;
-        }
+
         h2, h3, h4, h5, h6 {         
             text-align: center;
-            margin: 10px ;
+            margin: 10px;
         }
+
         section {
-            margin: 10px ;
+            margin: 10px;
         }
+
         ul {
             list-style-type: none;
             padding: 10px;
         }
+
         ul li {
-            margin-bottom: 30px ;
+            margin-bottom: 30px;
         }
+
         ul li a {
             text-decoration: wavy;
-            
         }
+
         ul li a:hover {
             text-decoration: underline;
             color: black;
         }
-        li{
+
+        li {
             color: aliceblue;
         }
-        a{
+
+        a {
            color: powderblue;
         }
-    
+
+        /* Novos estilos dos cards */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            padding: 30px;
+        }
+
+        .card {
+            position: relative;
+            width: 320px;
+            padding: 25px;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .card.sistemas {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        .card.programacao {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            box-shadow: 0 8px 20px rgba(46, 204, 113, 0.3);
+        }
+
+        .card.dados {
+            background: linear-gradient(135deg, #8e44ad, #9b59b6);
+            box-shadow: 0 8px 20px rgba(155, 89, 182, 0.3);
+        }
+
+        .card.metodologias {
+            background: linear-gradient(135deg, #e67e22, #f39c12);
+            box-shadow: 0 8px 20px rgba(243, 156, 18, 0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            color: white;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .card .code {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 15px;
+            color: white;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .card .description {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1em;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .card a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .card a:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
@@ -62,19 +148,88 @@
     </section>
 
     <section>
-        <h2>Módulos-UFCD 0804</h2>
-        <ul>
-            <li><strong><a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/779">Sistemas Operativos - Tipologias</a></strong> (0797)</li>
-            <li><strong><a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/780">Utilitários</a></strong> (0798)</li>
-            <li><strong><a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/17537">Fundamentos de Python</a></strong> (10793)</li>
-            <li><strong><a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/791">Programação em C/C++ Fundamentos</a></strong> (0809)</li>
-            <li><strong><a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/786">Algoritmos</a></strong> (0804)</li>
-            <li><strong><a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/787">Estrutura de Dados</a></strong> (0805)</li>
-            <li><strong><a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/788">Princípios Metodológicos de Programação</a></strong></li>
-            <li><strong><a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/793">Análise de Sistemas</a></strong> (0811)</li>
-            <li><strong><a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/17532">Fundamentos de Linguagem SQL</a></strong> (10788)</li>
-            <li><strong><a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/17533">Metodologias de Desenvolvimento de Software</a></strong> (10788)</li>
-        </ul>
+        <h2>Módulos-UFCD</h2>
+        <div class="card-container">
+            <!-- Sistemas -->
+            <div class="card sistemas">
+                <h3>Sistemas Operativos - Tipologias</h3>
+                <div class="code">UFCD: 0797</div>
+                <div class="description">Conhecimentos fundamentais sobre sistemas operativos, suas características e funcionamento.</div>
+                <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/779">Explorar Módulo →</a>
+            </div>
+
+            <!-- Utilitários -->
+            <div class="card sistemas">
+                <h3>Utilitários</h3>
+                <div class="code">UFCD: 0798</div>
+                <div class="description">Ferramentas e utilitários essenciais para o desenvolvimento.</div>
+                <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/780">Explorar Módulo →</a>
+            </div>
+
+            <!-- Python -->
+            <div class="card programacao">
+                <h3>Fundamentos de Python</h3>
+                <div class="code">UFCD: 10793</div>
+                <div class="description">Introdução à programação utilizando Python, conceitos básicos e práticas.</div>
+                <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/17537">Explorar Módulo →</a>
+            </div>
+
+            <!-- C/C++ -->
+            <div class="card programacao">
+                <h3>Programação em C/C++ Fundamentos</h3>
+                <div class="code">UFCD: 0809</div>
+                <div class="description">Conceitos fundamentais de programação em C/C++.</div>
+                <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/791">Explorar Módulo →</a>
+            </div>
+
+            <!-- Algoritmos -->
+            <div class="card dados">
+                <h3>Algoritmos</h3>
+                <div class="code">UFCD: 0804</div>
+                <div class="description">Lógica de programação e desenvolvimento de algoritmos.</div>
+                <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/786">Explorar Módulo →</a>
+            </div>
+
+            <!-- Estrutura de Dados -->
+            <div class="card dados">
+                <h3>Estrutura de Dados</h3>
+                <div class="code">UFCD: 0805</div>
+                <div class="description">Organização e manipulação de dados, tipos de estruturas.</div>
+                <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/787">Explorar Módulo →</a>
+            </div>
+
+            <!-- Princípios Metodológicos -->
+            <div class="card metodologias">
+                <h3>Princípios Metodológicos</h3>
+                <div class="code">UFCD: 0806</div>
+                <div class="description">Metodologias e boas práticas de programação.</div>
+                <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/788">Explorar Módulo →</a>
+            </div>
+
+            <!-- Análise de Sistemas -->
+            <div class="card metodologias">
+                <h3>Análise de Sistemas</h3>
+                <div class="code">UFCD: 0811</div>
+                <div class="description">Fundamentos de análise e modelagem de sistemas.</div>
+                <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/793">Explorar Módulo →</a>
+            </div>
+
+            <!-- SQL -->
+            <div class="card dados">
+                <h3>Fundamentos de SQL</h3>
+                <div class="code">UFCD: 10788</div>
+                <div class="description">Introdução à linguagem SQL e bases de dados.</div>
+                <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/17532">Explorar Módulo →</a>
+            </div>
+
+            <!-- Metodologias de Desenvolvimento -->
+            <div class="card metodologias">
+                <h3>Metodologias de Desenvolvimento</h3>
+                <div class="code">UFCD: 10789</div>
+                <div class="description">Estudo das metodologias de desenvolvimento de software.</div>
+                <a href="https://catalogo.anqep.gov.pt/ufcdDetalhe/17533">Explorar Módulo →</a>
+            </div>
+        </div>
     </section>
 </body>
 </html>
