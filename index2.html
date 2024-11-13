@@ -1,19 +1,126 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Inicial</title>
+    <title>Works of AP</title>
+    <style>
+        /* Estilo geral do fundo */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://i.gifer.com/Mq5.gif') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilo da seção de introdução */
+        .intro {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(30, 60, 114, 0.8); /* Cor semi-transparente para maior contraste */
+            color: #F7E3E3;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Títulos e textos */
+        .intro h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        .intro p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        /* Container de cards */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 20px;
+            justify-content: center;
+            max-width: 1200px;
+        }
+
+        /* Estilos dos cards */
+        .card {
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte para destacar */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 280px;
+            text-align: center;
+            padding: 25px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Efeito de hover para destacar o card */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Sombra mais forte no hover */
+        }
+
+        /* Links dos cards */
+        .card a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            padding: 20px;
+        }
+
+        /* Cores diferentes para cada card */
+        .card:nth-child(1) { background: linear-gradient(45deg, #FF6B6B, #FF8E8E); }
+        .card:nth-child(2) { background: linear-gradient(45deg, #4ECDC4, #6CE5DE); }
+        .card:nth-child(3) { background: linear-gradient(45deg, #45B7D1, #6EC6D9); }
+        .card:nth-child(4) { background: linear-gradient(45deg, #96C93D, #B5D763); }
+        .card:nth-child(5) { background: linear-gradient(45deg, #9B59B6, #B07CC6); }
+        .card:nth-child(6) { background: linear-gradient(45deg, #F7D794, #FFE5B4); }
+
+    </style>
 </head>
 <body>
-    <h1>Bem-vindo ao Meu Projeto!</h1>
-    <p>Veja os outros trabalhos:</p>
-    <ul>
-        <li><a href="hello-world.html">Trabalho 1</a></li>
-        <li><a href="algoritmo.html">Trabalho 2</a></li>
-          <li><a href="periféricos.html">Trabalho 4</a></li>
-            <li><a href="entrada.html">Trabalho 5</a></li>
-            <li><a href="saida.html">Trabalho 6</a></li>
-    </ul>
+
+    <!-- Introdução -->
+    <div class="intro">
+        <h1>Bem-vindo ao Meu Guia de Trabalhos</h1>
+        <p>Explore minha coleção de projetos e trabalhos acadêmicos</p>
+    </div>
+
+    <!-- Container de cards -->
+    <div class="card-container">
+        <div class="card">
+            <a href="hello-world.html">hello-world</a>
+        </div>
+        <div class="card">
+            <a href="algoritmo.html">Algoritmos</a>
+        </div>
+        <div class="card">
+            <a href="periféricos.html">Periféricos</a>
+        </div>
+       
+        <div class="card">
+            <a href="entrada.html">Periféricos de entrada</a>
+        </div>
+        <div class="card">
+            <a href="saida.html">Periféricos de saída</a>
+        </div>
+        <div class="card">
+            <a href="index.html">Módulos-UFCD</a>
+        </div>
+    </div>
+
 </body>
 </html>
