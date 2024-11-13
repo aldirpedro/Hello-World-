@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Meu Projeto!</h1>
+    <p>Veja os outros trabalhos:</p>
+    <ul>
+        <li><a href="http://127.0.0.1:5500/hello-world.html">Trabalho 1</a></li>
+        <li><a href="http://127.0.0.1:5500/algoritmo.html">Trabalho 2</a></li>
+        <li><a href="http://127.0.0.1:5500/index.html">Trabalho 3</a></li>
+          <li><a href="http://127.0.0.1:5500/Perif%C3%A9ricos.html">Trabalho 4</a></li>
+            <li><a href="http://127.0.0.1:5500/entrada.html">Trabalho 5</a></li>
+            <li><a href="http://127.0.0.1:5500/saida.html">Trabalho 6</a></li>
+    </ul>
+</body>
+</html>
