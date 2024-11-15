@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Works of AP</title>
     <style>
+        /* Importando a fonte Fira Code */
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
         /* Estilo geral do fundo */
         body {
             font-family: 'Arial', sans-serif;
@@ -44,50 +47,92 @@
 
         /* Container de cards */
         .card-container {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
-            padding: 20px;
-            justify-content: center;
             max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
         }
 
         /* Estilos dos cards */
         .card {
-            background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+            position: relative;
             border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte para destacar */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            width: 280px;
+            width: 100%;
+            height: 150px;
             text-align: center;
-            padding: 25px;
-            backdrop-filter: blur(5px);
+            padding: 0;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            font-family: 'Fira Code', monospace;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .voltar-btn {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #ff4d4d, #ff8080);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .voltar-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #ff8080, #ff4d4d);
+        }
+
+        .voltar-btn:active {
+            transform: translateY(1px);
         }
 
         /* Efeito de hover para destacar o card */
         .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Sombra mais forte no hover */
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            z-index: 1;
         }
 
-        /* Links dos cards */
-        .card a {
-            text-decoration: none;
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            display: block;
-            padding: 20px;
-        }
-
-        /* Cores diferentes para cada card */
+        /* Gradientes mais profissionais para cada card */
         .card:nth-child(1) { background: linear-gradient(45deg, #FF6B6B, #FF8E8E); }
         .card:nth-child(2) { background: linear-gradient(45deg, #4ECDC4, #6CE5DE); }
         .card:nth-child(3) { background: linear-gradient(45deg, #45B7D1, #6EC6D9); }
         .card:nth-child(4) { background: linear-gradient(45deg, #96C93D, #B5D763); }
         .card:nth-child(5) { background: linear-gradient(45deg, #9B59B6, #B07CC6); }
         .card:nth-child(6) { background: linear-gradient(45deg, #F7D794, #FFE5B4); }
+
+        .card:not(:last-child) {
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
     </style>
 </head>
@@ -104,19 +149,23 @@
         <div class="card">
             <a href="hello-world.html">hello-world</a>
         </div>
+        
         <div class="card">
             <a href="algoritmo.html">Algoritmos</a>
         </div>
+        
         <div class="card">
             <a href="periféricos.html">Periféricos</a>
         </div>
-       
+        
         <div class="card">
-            <a href="entrada.html">Periféricos de entrada</a>
+            <a href="entrada.html">Periféricos de Entrada</a>
         </div>
+        
         <div class="card">
-            <a href="saida.html">Periféricos de saída</a>
+            <a href="saida.html">Periféricos de Saída</a>
         </div>
+        
         <div class="card">
             <a href="index.html">Módulos-UFCD</a>
         </div>
